@@ -1,0 +1,26 @@
+#include <iostream>
+
+int main() {
+int n;
+std::cout << "Enter the number of corners: ";
+std::cin >> n;
+
+int angles[100];
+int sum = 0;
+
+// Ввід кутів
+for (int i = 0; i < n; i++) {
+std::cout << "Angle " << i + 1 << ": ";
+std::cin >> angles[i];
+sum += angles[i];
+}
+
+// Перевірка
+if (sum == 180 * (n - 2)) {
+std::cout << "Such a polygon may existe";
+} else {
+std::cout << "Such a polygon cannot existe";
+}
+
+return 0;
+}
