@@ -1,0 +1,41 @@
+#include <iostream>
+#include <cstdlib>
+
+int main() {
+int n;
+std::cout << "Enter the size of the array: ";
+std::cin >> n;
+
+int arr[100];
+
+// Заповнення масиву
+std::cout << "array: ";
+for (int i = 0; i < n; i++) {
+arr[i] = rand() % 100;
+std::cout << arr[i] << " ";
+}
+
+std::cout << std::endl;
+
+int find, replace;
+std::cout << "What number should I find?: ";
+std::cin >> find;
+
+std::cout << "What number should I replace it with?: ";
+std::cin >> replace;
+
+// Пошук і заміна
+for (int i = 0; i < n; i++) {
+if (arr[i] == find) {
+arr[i] = replace;
+}
+}
+
+// Вивід нового масиву
+std::cout << "New array: ";
+for (int i = 0; i < n; i++) {
+std::cout << arr[i] << " ";
+}
+
+return 0;
+}
