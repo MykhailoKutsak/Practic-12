@@ -1,0 +1,30 @@
+#include <iostream>
+#include <cstdlib>
+
+int main() {
+int n;
+std::cout << "Enter the size of the array: ";
+std::cin >> n;
+
+int arr[100];
+
+int even = 0;
+int odd = 0;
+
+for (int i = 0; i < n; i++) {
+arr[i] = rand() % 100;
+std::cout << arr[i] << " ";
+
+if (arr[i] % 2 == 0)
+even++;
+else
+odd++;
+}
+
+std::cout << std::endl;
+
+std::cout << "Doubles: " << even << std::endl;
+std::cout << "Odd: " << odd << std::endl;
+
+return 0;
+}
